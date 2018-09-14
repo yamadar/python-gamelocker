@@ -55,6 +55,7 @@ class Player(DataMessage):
     key_id = attr(str, "id")
 
     name = attr(str, "name")
+    shardId = attr(str, "shardId")
     stats = attr(dict, "stats")
 
 
@@ -78,6 +79,7 @@ class Team(DataMessage):
 class Roster(DataMessage):
     type_name = "roster"
     key_id = attr(str, "id")
+    won = attr(str, "won")
 
     stats = attr(dict, "stats")
 
@@ -94,6 +96,7 @@ class Match(DataMessage):
     gameMode = attr(str, "gameMode")
     patchVersion = attr(str, "patchVersion")
     region = attr(str, "region")
+    shardId = attr(str, "shardId")
     stats = attr(dict, "stats")
 
     rosters = rel(Roster, "rosters")
